@@ -10,7 +10,6 @@ public class GateOutput : MonoBehaviour
     public void PowerOutput()
     {
         powered = true;
-        //Debug.Log("Gate output colldier attempts power transfer");
         UpdatePowerOutput();
         BroadcastMessage("ActiveGlowOn");
     }
@@ -18,7 +17,6 @@ public class GateOutput : MonoBehaviour
     public void StopPowerOutput()
     {
         powered = false;
-        //Debug.Log("Gate output colldier stops power transfer");
         UpdatePowerOutput();
         BroadcastMessage("ActiveGlowOff");
     }
