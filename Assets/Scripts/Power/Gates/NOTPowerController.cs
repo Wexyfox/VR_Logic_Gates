@@ -47,7 +47,7 @@ public class NOTPowerController : MonoBehaviour
         }
     }
 
-    private void updateOutputBroadcast()
+    private void UpdateOutputBroadcast()
     {
         if (active == true)
         {
@@ -64,6 +64,6 @@ public class NOTPowerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        updateOutputBroadcast();
+        UpdateOutputBroadcast();
     }
 }

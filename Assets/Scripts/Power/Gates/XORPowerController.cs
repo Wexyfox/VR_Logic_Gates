@@ -19,7 +19,7 @@ public class XORPowerController : MonoBehaviour
         {
             inputB = true;
         }
-        updateOutputBroadcast();
+        UpdateOutputBroadcast();
     }
 
     public void StopPower(string givenInput)
@@ -32,7 +32,7 @@ public class XORPowerController : MonoBehaviour
         {
             inputB = false;
         }
-        updateOutputBroadcast();
+        UpdateOutputBroadcast();
     }
 
     public void SetActive()
@@ -74,7 +74,7 @@ public class XORPowerController : MonoBehaviour
         }
     }
 
-    private void updateOutputBroadcast()
+    private void UpdateOutputBroadcast()
     {
         if (active == true)
         {
@@ -92,6 +92,6 @@ public class XORPowerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        updateOutputBroadcast();
+        UpdateOutputBroadcast();
     }
 }

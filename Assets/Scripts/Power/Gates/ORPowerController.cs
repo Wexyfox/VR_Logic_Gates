@@ -19,7 +19,7 @@ public class ORPowerController : MonoBehaviour
         {
             inputB = true;
         }
-        updateOutputBroadcast();
+        UpdateOutputBroadcast();
     }
 
     public void StopPower(string givenInput)
@@ -32,7 +32,7 @@ public class ORPowerController : MonoBehaviour
         {
             inputB = false;
         }
-        updateOutputBroadcast();
+        UpdateOutputBroadcast();
     }
 
     public void SetActive()
@@ -74,7 +74,7 @@ public class ORPowerController : MonoBehaviour
         }
     }
 
-    private void updateOutputBroadcast()
+    private void UpdateOutputBroadcast()
     {
         if (active == true)
         {
@@ -91,6 +91,6 @@ public class ORPowerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        updateOutputBroadcast();
+        UpdateOutputBroadcast();
     }
 }

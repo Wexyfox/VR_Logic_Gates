@@ -19,7 +19,7 @@ public class ANDPowerController : MonoBehaviour
         {
             inputB = true;
         }
-        updateOutputBroadcast();
+        UpdateOutputBroadcast();
     }
 
     public void StopPower(string givenInput)
@@ -32,7 +32,7 @@ public class ANDPowerController : MonoBehaviour
         {
             inputB = false;
         }
-        updateOutputBroadcast();
+        UpdateOutputBroadcast();
     }
 
     public void SetActive()
@@ -74,7 +74,7 @@ public class ANDPowerController : MonoBehaviour
         }
     }
 
-    private void updateOutputBroadcast()
+    private void UpdateOutputBroadcast()
     {
         if (active == true)
         {
@@ -92,7 +92,7 @@ public class ANDPowerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        updateOutputBroadcast();
+        UpdateOutputBroadcast();
     }
 }
 
