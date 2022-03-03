@@ -25,7 +25,7 @@ public class Marker : MonoBehaviour
     {
         markerRenderer = tipTransform.GetComponent<Renderer>();
         colourArray = Enumerable.Repeat(markerRenderer.material.color, tipSize * tipSize).ToArray();
-        tipHeight = tipTransform.localScale.y;
+        tipHeight = tipTransform.localScale.z -0.005f;
     }
 
    
@@ -36,7 +36,7 @@ public class Marker : MonoBehaviour
 
     private void Draw()
     {
-        if (Physics.Raycast(tipTransform.position, transform.up, out touchedObject, tipHeight))
+        if (Physics.Raycast(tipTransform.position, transform.forward, out touchedObject, tipHeight))
         {
             if (touchedObject.transform.CompareTag("Board"))
             {
