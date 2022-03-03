@@ -9,6 +9,10 @@ TagManager:
   - Boundary
   - Input
   - Output
+  - Board
+  - Marker
+  - OutputBox
+  - InputBox
   layers:
   - Default
   - TransparentFX
