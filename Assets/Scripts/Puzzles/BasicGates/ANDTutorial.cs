@@ -35,6 +35,8 @@ public class ANDTutorial : MonoBehaviour
         if (outputBoxA.GetComponent<OutputPower>().CheckPowered())
         {
             stateCheck += 1;
+            Debug.Log(stateCheck);
+            Debug.Log("1,1");
         }
         Invoke("stateCheck2", stateChangeTime);
     }
@@ -46,6 +48,8 @@ public class ANDTutorial : MonoBehaviour
         if (!outputBoxA.GetComponent<OutputPower>().CheckPowered())
         {
             stateCheck += 1;
+            Debug.Log(stateCheck);
+            Debug.Log("0,1");
         }
         Invoke("stateCheck3", stateChangeTime);
     }
@@ -56,6 +60,7 @@ public class ANDTutorial : MonoBehaviour
         if (!outputBoxA.GetComponent<OutputPower>().CheckPowered())
         {
             stateCheck += 1;
+            Debug.Log("1,0");
         }
         Invoke("stateCheck4", stateChangeTime);
     }
@@ -66,6 +71,8 @@ public class ANDTutorial : MonoBehaviour
         if (!outputBoxA.GetComponent<OutputPower>().CheckPowered())
         {
             stateCheck += 1;
+            Debug.Log(stateCheck);
+            Debug.Log("0,0");
         }
         Invoke("ANDPowerCheck", stateChangeTime);
     }
@@ -74,7 +81,9 @@ public class ANDTutorial : MonoBehaviour
     {
         if (stateCheck == 4)
         {
+            stateCheck = 0;
             puzzlePassed = true;
+            Debug.Log(stateCheck);
             roomWall1.GetComponent<MeshRenderer>().sharedMaterial = passMaterial;
             roomWall2.GetComponent<MeshRenderer>().sharedMaterial = passMaterial;
             roomWall3.GetComponent<MeshRenderer>().sharedMaterial = passMaterial;
@@ -84,7 +93,7 @@ public class ANDTutorial : MonoBehaviour
         else
         {
             stateCheck = 0;
-            Debug.Log("puzzle failed");
+            Debug.Log(stateCheck);
             roomWall1.GetComponent<MeshRenderer>().sharedMaterial = failMaterial;
             roomWall2.GetComponent<MeshRenderer>().sharedMaterial = failMaterial;
             roomWall3.GetComponent<MeshRenderer>().sharedMaterial = failMaterial;
