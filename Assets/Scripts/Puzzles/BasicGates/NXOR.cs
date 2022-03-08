@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class XORTutorial : MonoBehaviour
+public class NXOR : MonoBehaviour
 {
     private int stateChangeTime = 2;
     [SerializeField] GameObject testButton;
@@ -33,7 +33,7 @@ public class XORTutorial : MonoBehaviour
     private void CheckSet1()
     {
         CheckOutputPower();
-        if (!checkBool)
+        if (checkBool)
         {
             stateCheck += 1;
         }
@@ -50,7 +50,7 @@ public class XORTutorial : MonoBehaviour
     private void CheckSet2()
     {
         CheckOutputPower();
-        if (checkBool)
+        if (!checkBool)
         {
             stateCheck += 1;
         }
@@ -67,7 +67,7 @@ public class XORTutorial : MonoBehaviour
     private void CheckSet3()
     {
         CheckOutputPower();
-        if (checkBool)
+        if (!checkBool)
         {
             stateCheck += 1;
         }
@@ -84,7 +84,7 @@ public class XORTutorial : MonoBehaviour
     private void CheckSet4()
     {
         CheckOutputPower();
-        if (!checkBool)
+        if (checkBool)
         {
             stateCheck += 1;
         }
@@ -117,6 +117,7 @@ public class XORTutorial : MonoBehaviour
     {
         checkBool = outputBoxA.GetComponent<OutputPower>().CheckPowered();
     }
+
     public void TestButtonDisable()
     {
         testButton.GetComponent<BoxCollider>().enabled = false;

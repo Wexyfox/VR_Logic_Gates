@@ -5,113 +5,130 @@ using UnityEngine;
 public class ANDTutorial : MonoBehaviour
 {
     private int stateChangeTime = 2;
-    private int roomColorChangeTime = 5;
-
-    [SerializeField] Material defaultMaterial;
-    [SerializeField] Material passMaterial;
-    [SerializeField] Material failMaterial;
+    [SerializeField] GameObject testButton;
+    [SerializeField] GameObject inputAButton;
+    [SerializeField] GameObject inputBButton;
+    [SerializeField] GameObject roomColorChanger;
 
     [SerializeField] GameObject inputBoxA;
     [SerializeField] GameObject inputBoxB;
     [SerializeField] GameObject outputBoxA;
     private bool puzzlePassed = false;
-
-    [SerializeField] GameObject roomWall1;
-    [SerializeField] GameObject roomWall2;
-    [SerializeField] GameObject roomWall3;
-    [SerializeField] GameObject roomWall4;
+    private bool checkBool;
 
     private int stateCheck = 0;
 
-    public void puzzleCheck()
+    public void PuzzleCheck()
     {
-        Invoke("stateCheck1", stateChangeTime);
+        Invoke("StateSet1", stateChangeTime);
     }
 
-    private void stateCheck1()
+    private void StateSet1()
     {
         inputBoxA.GetComponent<InputPower>().PowerOn();
         inputBoxB.GetComponent<InputPower>().PowerOn();
-        if (outputBoxA.GetComponent<OutputPower>().CheckPowered())
-        {
-            stateCheck += 1;
-            Debug.Log(stateCheck);
-            Debug.Log("1,1");
-        }
-        Invoke("stateCheck2", stateChangeTime);
+        Invoke("CheckSet1", stateChangeTime);
     }
 
-    private void stateCheck2()
+    private void CheckSet1()
+    {
+        CheckOutputPower();
+        if (checkBool)
+        {
+            stateCheck += 1;
+        }
+        StateSet2();
+    }
+
+    private void StateSet2()
     {
         inputBoxA.GetComponent<InputPower>().PowerOff();
         inputBoxB.GetComponent<InputPower>().PowerOn();
-        if (!outputBoxA.GetComponent<OutputPower>().CheckPowered())
+        Invoke("CheckSet2", stateChangeTime);
+    }
+
+    private void CheckSet2()
+    {
+        CheckOutputPower();
+        if (!checkBool)
         {
             stateCheck += 1;
-            Debug.Log(stateCheck);
-            Debug.Log("0,1");
         }
-        Invoke("stateCheck3", stateChangeTime);
+        StateSet3();
     }
-    private void stateCheck3()
+
+    private void StateSet3()
     {
         inputBoxA.GetComponent<InputPower>().PowerOn();
         inputBoxB.GetComponent<InputPower>().PowerOff();
-        if (!outputBoxA.GetComponent<OutputPower>().CheckPowered())
+        Invoke("CheckSet3", stateChangeTime);
+    }
+
+    private void CheckSet3()
+    {
+        CheckOutputPower();
+        if (!checkBool)
         {
             stateCheck += 1;
-            Debug.Log("1,0");
         }
-        Invoke("stateCheck4", stateChangeTime);
+        StateSet4();
     }
-    private void stateCheck4()
+
+    private void StateSet4()
     {
         inputBoxA.GetComponent<InputPower>().PowerOff();
         inputBoxB.GetComponent<InputPower>().PowerOff();
-        if (!outputBoxA.GetComponent<OutputPower>().CheckPowered())
-        {
-            stateCheck += 1;
-            Debug.Log(stateCheck);
-            Debug.Log("0,0");
-        }
-        Invoke("ANDPowerCheck", stateChangeTime);
+        Invoke("CheckSet4", stateChangeTime);
     }
 
-    private void ANDPowerCheck()
+    private void CheckSet4()
+    {
+        CheckOutputPower();
+        if (!checkBool)
+        {
+            stateCheck += 1;
+        }
+        NANDPowerCheck();
+    }
+
+    private void NANDPowerCheck()
     {
         if (stateCheck == 4)
         {
             stateCheck = 0;
             puzzlePassed = true;
-            Debug.Log(stateCheck);
-            roomWall1.GetComponent<MeshRenderer>().sharedMaterial = passMaterial;
-            roomWall2.GetComponent<MeshRenderer>().sharedMaterial = passMaterial;
-            roomWall3.GetComponent<MeshRenderer>().sharedMaterial = passMaterial;
-            roomWall4.GetComponent<MeshRenderer>().sharedMaterial = passMaterial;
-            Invoke("RoomColorReset", roomColorChangeTime);
+            roomColorChanger.GetComponent<RoomColorChange>().roomGreen();
         }
         else
         {
             stateCheck = 0;
-            Debug.Log(stateCheck);
-            roomWall1.GetComponent<MeshRenderer>().sharedMaterial = failMaterial;
-            roomWall2.GetComponent<MeshRenderer>().sharedMaterial = failMaterial;
-            roomWall3.GetComponent<MeshRenderer>().sharedMaterial = failMaterial;
-            roomWall4.GetComponent<MeshRenderer>().sharedMaterial = failMaterial;
-            Invoke("RoomColorReset", roomColorChangeTime);
+            puzzlePassed = false;
+            roomColorChanger.GetComponent<RoomColorChange>().roomRed();
         }
-    }
-
-    private void RoomColorReset()
-    {
-        roomWall1.GetComponent<MeshRenderer>().sharedMaterial = defaultMaterial;
-        roomWall2.GetComponent<MeshRenderer>().sharedMaterial = defaultMaterial;
-        roomWall3.GetComponent<MeshRenderer>().sharedMaterial = defaultMaterial;
-        roomWall4.GetComponent<MeshRenderer>().sharedMaterial = defaultMaterial;
+        TestButtonEnable();
     }
 
     public bool CheckPuzzlePassed()
     {
         return puzzlePassed;
+    }
+
+    private void CheckOutputPower()
+    {
+        checkBool = outputBoxA.GetComponent<OutputPower>().CheckPowered();
+    }
+
+    public void TestButtonDisable()
+    {
+        testButton.GetComponent<BoxCollider>().enabled = false;
+        inputAButton.GetComponent<BoxCollider>().enabled = false;
+        inputBButton.GetComponent<BoxCollider>().enabled = false;
+    }
+
+    private void TestButtonEnable()
+    {
+        testButton.GetComponent<BoxCollider>().enabled = true;
+        inputAButton.GetComponent<BoxCollider>().enabled = true;
+        inputBButton.GetComponent<BoxCollider>().enabled = true;
     }
 }
