@@ -5,9 +5,11 @@ using UnityEngine;
 public class XORTutorial : MonoBehaviour
 {
     private int stateChangeTime = 2;
+
     [SerializeField] GameObject testButton;
-    [SerializeField] GameObject inputAButton;
-    [SerializeField] GameObject inputBButton;
+    [SerializeField] GameObject leftHandCollider;
+    [SerializeField] GameObject rightHandCollider;
+
     [SerializeField] GameObject roomColorChanger;
 
     [SerializeField] GameObject inputBoxA;
@@ -117,17 +119,18 @@ public class XORTutorial : MonoBehaviour
     {
         checkBool = outputBoxA.GetComponent<OutputPower>().CheckPowered();
     }
+
     public void TestButtonDisable()
     {
         testButton.GetComponent<BoxCollider>().enabled = false;
-        inputAButton.GetComponent<BoxCollider>().enabled = false;
-        inputBButton.GetComponent<BoxCollider>().enabled = false;
+        leftHandCollider.GetComponent<SphereCollider>().enabled = false;
+        rightHandCollider.GetComponent<SphereCollider>().enabled = false;
     }
 
     private void TestButtonEnable()
     {
         testButton.GetComponent<BoxCollider>().enabled = true;
-        inputAButton.GetComponent<BoxCollider>().enabled = true;
-        inputBButton.GetComponent<BoxCollider>().enabled = true;
+        leftHandCollider.GetComponent<SphereCollider>().enabled = true;
+        rightHandCollider.GetComponent<SphereCollider>().enabled = true;
     }
 }
