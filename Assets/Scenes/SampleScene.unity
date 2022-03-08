@@ -797,8 +797,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   testButton: {fileID: 63537599}
-  inputAButton: {fileID: 180646362}
-  inputBButton: {fileID: 1899194289}
+  leftHandCollider: {fileID: 1302060515}
+  rightHandCollider: {fileID: 709070996}
   roomColorChanger: {fileID: 205507013}
   inputBoxA: {fileID: 1213707284}
   inputBoxB: {fileID: 2049899987}
@@ -1122,11 +1122,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5581976334730076033, guid: 881eaab6ea7bfc24ea127b33b0bf6d52, type: 3}
   m_PrefabInstance: {fileID: 173085581}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &180646362 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4464284337394328596, guid: 2c65a2ec703ab174cbb9554a03484e5e, type: 3}
-  m_PrefabInstance: {fileID: 4464284336444014006}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &184625012
 GameObject:
@@ -1823,8 +1818,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   testButton: {fileID: 424003744}
-  inputAButton: {fileID: 180646362}
-  inputBButton: {fileID: 1899194289}
+  leftHandCollider: {fileID: 1302060515}
+  rightHandCollider: {fileID: 709070996}
   roomColorChanger: {fileID: 205507013}
   inputBoxA: {fileID: 1213707284}
   inputBoxB: {fileID: 2049899987}
@@ -2445,8 +2440,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   testButton: {fileID: 480560858}
-  inputAButton: {fileID: 180646362}
-  inputBButton: {fileID: 1899194289}
+  leftHandCollider: {fileID: 1302060515}
+  rightHandCollider: {fileID: 709070996}
   roomColorChanger: {fileID: 205507013}
   inputBoxA: {fileID: 1213707284}
   inputBoxB: {fileID: 2049899987}
@@ -3421,7 +3416,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: dd8eb417fadd2684b87c35b118c6a8a6, type: 2}
     - target: {fileID: 919132149155446097, guid: 9a8ab490513756d47b0172d75f0de6d2, type: 3}
       propertyPath: m_Name
-      value: placeholderBalls
+      value: rightPlaceHolderBalls
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9a8ab490513756d47b0172d75f0de6d2, type: 3}
       propertyPath: m_TagString
@@ -4653,7 +4648,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: dd8eb417fadd2684b87c35b118c6a8a6, type: 2}
     - target: {fileID: 919132149155446097, guid: 9a8ab490513756d47b0172d75f0de6d2, type: 3}
       propertyPath: m_Name
-      value: placeholderBalls
+      value: leftPlaceHolderBalls
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9a8ab490513756d47b0172d75f0de6d2, type: 3}
       propertyPath: m_TagString
@@ -4999,8 +4994,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   testButton: {fileID: 1263806527}
-  inputAButton: {fileID: 180646362}
-  inputBButton: {fileID: 1899194289}
+  leftHandCollider: {fileID: 1302060515}
+  rightHandCollider: {fileID: 709070996}
   roomColorChanger: {fileID: 205507013}
   inputBoxA: {fileID: 1213707284}
   inputBoxB: {fileID: 2049899987}
@@ -5895,8 +5890,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1470089561}
   - component: {fileID: 1470089565}
-  - component: {fileID: 1470089563}
-  - component: {fileID: 1470089562}
   m_Layer: 0
   m_Name: LeftHand Controller
   m_TagString: Player
@@ -5919,97 +5912,6 @@ Transform:
   m_Father: {fileID: 1398828263}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1470089562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1470089560}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4253f32900bcc4d499d675566142ded0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 1239057549}
-  m_InteractionLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_InteractionLayers:
-    m_Bits: 4294967295
-  m_AttachTransform: {fileID: 0}
-  m_KeepSelectedTargetValid: 1
-  m_StartingSelectedInteractable: {fileID: 0}
-  m_HoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectActionTrigger: 0
-  m_HideControllerOnSelect: 0
-  m_AllowHoveredActivate: 0
-  m_PlayAudioClipOnSelectEntered: 0
-  m_AudioClipForOnSelectEntered: {fileID: 0}
-  m_PlayAudioClipOnSelectExited: 0
-  m_AudioClipForOnSelectExited: {fileID: 0}
-  m_PlayAudioClipOnSelectCanceled: 0
-  m_AudioClipForOnSelectCanceled: {fileID: 0}
-  m_PlayAudioClipOnHoverEntered: 0
-  m_AudioClipForOnHoverEntered: {fileID: 0}
-  m_PlayAudioClipOnHoverExited: 0
-  m_AudioClipForOnHoverExited: {fileID: 0}
-  m_PlayAudioClipOnHoverCanceled: 0
-  m_AudioClipForOnHoverCanceled: {fileID: 0}
-  m_PlayHapticsOnSelectEntered: 0
-  m_HapticSelectEnterIntensity: 0
-  m_HapticSelectEnterDuration: 0
-  m_PlayHapticsOnSelectExited: 0
-  m_HapticSelectExitIntensity: 0
-  m_HapticSelectExitDuration: 0
-  m_PlayHapticsOnSelectCanceled: 0
-  m_HapticSelectCancelIntensity: 0
-  m_HapticSelectCancelDuration: 0
-  m_PlayHapticsOnHoverEntered: 0
-  m_HapticHoverEnterIntensity: 0
-  m_HapticHoverEnterDuration: 0
-  m_PlayHapticsOnHoverExited: 0
-  m_HapticHoverExitIntensity: 0
-  m_HapticHoverExitDuration: 0
-  m_PlayHapticsOnHoverCanceled: 0
-  m_HapticHoverCancelIntensity: 0
-  m_HapticHoverCancelDuration: 0
---- !u!135 &1470089563
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1470089560}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.05
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1470089565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6481,8 +6383,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   testButton: {fileID: 1564709978}
-  inputAButton: {fileID: 180646362}
-  inputBButton: {fileID: 1899194289}
+  leftHandCollider: {fileID: 1302060515}
+  rightHandCollider: {fileID: 709070996}
   roomColorChanger: {fileID: 205507013}
   inputBoxA: {fileID: 1213707284}
   inputBoxB: {fileID: 2049899987}
@@ -7240,11 +7142,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1899194289 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4464284337394328596, guid: 2c65a2ec703ab174cbb9554a03484e5e, type: 3}
-  m_PrefabInstance: {fileID: 1941390868}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1901799765
 GameObject:
   m_ObjectHideFlags: 0
@@ -7844,8 +7741,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   testButton: {fileID: 1983668833}
-  inputAButton: {fileID: 180646362}
-  inputBButton: {fileID: 1899194289}
+  leftHandCollider: {fileID: 1302060515}
+  rightHandCollider: {fileID: 709070996}
   roomColorChanger: {fileID: 205507013}
   inputBoxA: {fileID: 1213707284}
   inputBoxB: {fileID: 2049899987}
