@@ -811,6 +811,7 @@ GameObject:
   - component: {fileID: 205507015}
   - component: {fileID: 205507014}
   - component: {fileID: 205507016}
+  - component: {fileID: 205507017}
   m_Layer: 0
   m_Name: RoomController
   m_TagString: Untagged
@@ -863,9 +864,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69aab44ce484c045833720560289649, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorialButton: {fileID: 686727123}
-  puzzlesButton: {fileID: 1233594583}
-  sandboxButton: {fileID: 531715303}
+--- !u!114 &205507017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205507013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d6bf4dca0e85c74f8a2e647ba4ab13f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &215296234
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,6 +1296,24 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!1 &482322652 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7566017803546255553, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
+  m_PrefabInstance: {fileID: 1500233532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &482322658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482322652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de77f5b62e282f04fa6556efc87e99f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: 
 --- !u!1 &498204782
 GameObject:
   m_ObjectHideFlags: 0
@@ -1381,16 +1409,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &531715303 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7566017803546255553, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
-  m_PrefabInstance: {fileID: 1500233532}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &686727123 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7566017803546255553, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
   m_PrefabInstance: {fileID: 1955220873}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &686727124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686727123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de77f5b62e282f04fa6556efc87e99f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: TutorialWires
 --- !u!1 &709070996 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 11ae7c81853f5eb4bbf0debf460e551a, type: 3}
@@ -1741,7 +1777,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7566017803546255553, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: m_Name
-      value: PuzzlesCollider
+      value: NextRoomCollider
       objectReference: {fileID: 0}
     - target: {fileID: 7566017803546255556, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: m_audioClip
@@ -1753,7 +1789,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7566017803701644721, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: m_TagString
-      value: Button
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7566017804355823237, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: m_Name
@@ -2073,11 +2109,6 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7566017804355823238, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
   m_PrefabInstance: {fileID: 1500233532}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1233594583 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7566017803546255553, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
-  m_PrefabInstance: {fileID: 1080121650}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1239057548
 GameObject:
@@ -2525,7 +2556,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7566017803546255553, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: m_Name
-      value: SandboxCollider
+      value: NextRoomCollider
       objectReference: {fileID: 0}
     - target: {fileID: 7566017803546255556, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: m_audioClip
@@ -2537,7 +2568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7566017803701644721, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: m_TagString
-      value: Button
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7566017804355823237, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: m_Name
@@ -3104,7 +3135,39 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7566017803546255553, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: m_Name
-      value: TutorialCollider
+      value: NextRoomCollider
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566017803546255553, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
+      propertyPath: m_TagString
+      value: Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
+      propertyPath: onPress.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
+      propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
+      propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 686727124}
+    - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
+      propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
+      propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
+      propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
+      propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7566017803546255556, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: m_audioClip
@@ -3116,7 +3179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7566017803701644721, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: m_TagString
-      value: Button
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7566017804355823237, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: m_Name
@@ -3211,6 +3274,24 @@ Transform:
   m_Father: {fileID: 297411421}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2077885777 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7566017803546255553, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
+  m_PrefabInstance: {fileID: 1080121650}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2077885783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077885777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de77f5b62e282f04fa6556efc87e99f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: 
 --- !u!4 &2101691122 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 11ae7c81853f5eb4bbf0debf460e551a, type: 3}

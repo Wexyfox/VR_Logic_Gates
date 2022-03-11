@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class TestZoneRoom : MonoBehaviour
 {
-    private GameObject[] buttons;
-
     private void Start()
     {
-        buttons = GameObject.FindGameObjectsWithTag("Button");
-
-        foreach (GameObject button in buttons)
-        {
-            button.GetComponent<ButtonControllerVR>().ButtonEnable();
-        }
+        gameObject.GetComponent<GlobalButtonEnableDisable>().TestButtonEnable();
     }
 }

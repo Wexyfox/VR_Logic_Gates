@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ANDTutorial : MonoBehaviour
+public class WireTutorial : MonoBehaviour
 {
     private int stateChangeTime = 2;
     [SerializeField] GameObject roomController;
 
     [SerializeField] GameObject inputBoxA;
-    [SerializeField] GameObject inputBoxB;
     [SerializeField] GameObject outputBoxA;
-    private bool puzzlePassed = false;
+
     private bool checkBool;
 
     private int stateCheck = 0;
@@ -23,7 +22,6 @@ public class ANDTutorial : MonoBehaviour
     private void StateSet1()
     {
         inputBoxA.GetComponent<InputPower>().PowerOn();
-        inputBoxB.GetComponent<InputPower>().PowerOn();
         Invoke("CheckSet1", stateChangeTime);
     }
 
@@ -40,7 +38,6 @@ public class ANDTutorial : MonoBehaviour
     private void StateSet2()
     {
         inputBoxA.GetComponent<InputPower>().PowerOff();
-        inputBoxB.GetComponent<InputPower>().PowerOn();
         Invoke("CheckSet2", stateChangeTime);
     }
 
@@ -51,63 +48,23 @@ public class ANDTutorial : MonoBehaviour
         {
             stateCheck += 1;
         }
-        StateSet3();
+        WireTutorialPowerCheck();
     }
 
-    private void StateSet3()
+    private void WireTutorialPowerCheck()
     {
-        inputBoxA.GetComponent<InputPower>().PowerOn();
-        inputBoxB.GetComponent<InputPower>().PowerOff();
-        Invoke("CheckSet3", stateChangeTime);
-    }
-
-    private void CheckSet3()
-    {
-        CheckOutputPower();
-        if (!checkBool)
-        {
-            stateCheck += 1;
-        }
-        StateSet4();
-    }
-
-    private void StateSet4()
-    {
-        inputBoxA.GetComponent<InputPower>().PowerOff();
-        inputBoxB.GetComponent<InputPower>().PowerOff();
-        Invoke("CheckSet4", stateChangeTime);
-    }
-
-    private void CheckSet4()
-    {
-        CheckOutputPower();
-        if (!checkBool)
-        {
-            stateCheck += 1;
-        }
-        NANDPowerCheck();
-    }
-
-    private void NANDPowerCheck()
-    {
-        if (stateCheck == 4)
+        if (stateCheck == 2)
         {
             stateCheck = 0;
-            puzzlePassed = true;
             roomController.GetComponent<RoomColorChange>().roomGreen();
+            roomController.GetComponent<GlobalButtonEnableDisable>().ActivateNextRoomButtons();
         }
         else
         {
             stateCheck = 0;
-            puzzlePassed = false;
             roomController.GetComponent<RoomColorChange>().roomRed();
         }
         roomController.GetComponent<GlobalButtonEnableDisable>().TestButtonEnable();
-    }
-
-    public bool CheckPuzzlePassed()
-    {
-        return puzzlePassed;
     }
 
     private void CheckOutputPower()

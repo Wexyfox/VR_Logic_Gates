@@ -173,7 +173,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 39451bdc39293584292408ab8cfecd97, type: 2}
+  - {fileID: 2100000, guid: 51613a62b88d63548a4eef6fe46d9072, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58125c9b699231d49b8bc137cb7258db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emissiveMaterial: {fileID: 2100000, guid: 39451bdc39293584292408ab8cfecd97, type: 2}
+  emissiveMaterial: {fileID: 2100000, guid: 51613a62b88d63548a4eef6fe46d9072, type: 2}
   glowObject: {fileID: 4464284336536761163}
 --- !u!1 &4464284336851139305
 GameObject:
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 4464284337394328592}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
