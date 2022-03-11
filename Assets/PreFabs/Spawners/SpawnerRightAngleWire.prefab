@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 2629661023944518294}
   - component: {fileID: 2629661023944518288}
   - component: {fileID: 2629661023944518295}
+  - component: {fileID: 52495501123720846}
   m_Layer: 0
   m_Name: Press
   m_TagString: Untagged
@@ -241,6 +242,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &52495501123720846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2629661023944518293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58125c9b699231d49b8bc137cb7258db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emissiveMaterial: {fileID: 2100000, guid: 39451bdc39293584292408ab8cfecd97, type: 2}
+  glowObject: {fileID: 2629661023944518295}
 --- !u!1 &2629661024594831333
 GameObject:
   m_ObjectHideFlags: 0

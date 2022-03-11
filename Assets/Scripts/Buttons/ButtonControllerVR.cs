@@ -10,7 +10,7 @@ public class ButtonControllerVR : MonoBehaviour
     public UnityEvent onRelease;
     AudioSource soundEffect;
     private bool isPressed = false;
-
+    private bool buttonEnabled;
 
     void Start()
     {
@@ -19,12 +19,15 @@ public class ButtonControllerVR : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!isPressed & other.gameObject.tag == "Player")
+        if (buttonEnabled)
         {
-            button.transform.localPosition = new Vector3(0, 0.004f, 0);
-            onPress.Invoke();
-            soundEffect.Play();
-            isPressed = true;
+            if (!isPressed & other.gameObject.tag == "Player")
+            {
+                button.transform.localPosition = new Vector3(0, 0.004f, 0);
+                onPress.Invoke();
+                soundEffect.Play();
+                isPressed = true;
+            }
         }
     }
 
@@ -36,5 +39,17 @@ public class ButtonControllerVR : MonoBehaviour
             onRelease.Invoke();
             isPressed = false;
         }
+    }
+
+    public void ButtonEnable()
+    {
+        button.BroadcastMessage("ActiveGlowOn");
+        buttonEnabled = true;
+    }
+
+    public void ButtonDisable()
+    {
+        button.BroadcastMessage("ActiveGlowOff");
+        buttonEnabled = false;
     }
 }

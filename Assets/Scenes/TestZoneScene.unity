@@ -687,7 +687,7 @@ PrefabInstance:
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onRelease.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 63537600}
+      objectReference: {fileID: 205507017}
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -710,7 +710,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onRelease.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: XORTutorial, Assembly-CSharp
+      value: GlobalButtonEnableDisable, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -796,10 +796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada543a2317396546ae3bdda4ca3df17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testButton: {fileID: 63537599}
-  leftHandCollider: {fileID: 1302060515}
-  rightHandCollider: {fileID: 709070996}
-  roomColorChanger: {fileID: 205507013}
+  roomController: {fileID: 205507013}
   inputBoxA: {fileID: 1213707284}
   inputBoxB: {fileID: 2049899987}
   outputBoxA: {fileID: 2054628209}
@@ -1376,6 +1373,8 @@ GameObject:
   m_Component:
   - component: {fileID: 205507015}
   - component: {fileID: 205507014}
+  - component: {fileID: 205507016}
+  - component: {fileID: 205507017}
   m_Layer: 0
   m_Name: RoomController
   m_TagString: Untagged
@@ -1416,6 +1415,30 @@ Transform:
   m_Father: {fileID: 297411421}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &205507016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205507013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 747bc43f08ee8f14b820c775b5c40c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &205507017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205507013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d6bf4dca0e85c74f8a2e647ba4ab13f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &207648766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1817,10 +1840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 238db5f20cda9564480fc09355af9295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testButton: {fileID: 424003744}
-  leftHandCollider: {fileID: 1302060515}
-  rightHandCollider: {fileID: 709070996}
-  roomColorChanger: {fileID: 205507013}
+  roomController: {fileID: 205507013}
   inputBoxA: {fileID: 1213707284}
   inputBoxB: {fileID: 2049899987}
   outputBoxA: {fileID: 2054628209}
@@ -2330,7 +2350,7 @@ PrefabInstance:
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onRelease.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 480560859}
+      objectReference: {fileID: 205507017}
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -2353,7 +2373,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onRelease.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: NOR, Assembly-CSharp
+      value: GlobalButtonEnableDisable, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2439,10 +2459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fb80d8d163bf6b459fc91b9dd69ddfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testButton: {fileID: 480560858}
-  leftHandCollider: {fileID: 1302060515}
-  rightHandCollider: {fileID: 709070996}
-  roomColorChanger: {fileID: 205507013}
+  roomController: {fileID: 205507013}
   inputBoxA: {fileID: 1213707284}
   inputBoxB: {fileID: 2049899987}
   outputBoxA: {fileID: 2054628209}
@@ -4997,7 +5014,7 @@ PrefabInstance:
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onRelease.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1263806528}
+      objectReference: {fileID: 205507017}
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -5020,7 +5037,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onRelease.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ORTutorial, Assembly-CSharp
+      value: GlobalButtonEnableDisable, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -5106,10 +5123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9611610279035ee41a2cf81e702e3848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testButton: {fileID: 1263806527}
-  leftHandCollider: {fileID: 1302060515}
-  rightHandCollider: {fileID: 709070996}
-  roomColorChanger: {fileID: 205507013}
+  roomController: {fileID: 205507013}
   inputBoxA: {fileID: 1213707284}
   inputBoxB: {fileID: 2049899987}
   outputBoxA: {fileID: 2054628209}
@@ -5242,7 +5256,7 @@ PrefabInstance:
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onRelease.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 424003746}
+      objectReference: {fileID: 205507017}
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -5265,7 +5279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onRelease.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ANDTutorial, Assembly-CSharp
+      value: GlobalButtonEnableDisable, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -6386,7 +6400,7 @@ PrefabInstance:
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onRelease.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1564709979}
+      objectReference: {fileID: 205507017}
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -6409,7 +6423,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onRelease.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: NAND, Assembly-CSharp
+      value: GlobalButtonEnableDisable, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -6495,10 +6509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac9e731285f7cab499cb4a34ef6d8772, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testButton: {fileID: 1564709978}
-  leftHandCollider: {fileID: 1302060515}
-  rightHandCollider: {fileID: 709070996}
-  roomColorChanger: {fileID: 205507013}
+  roomController: {fileID: 205507013}
   inputBoxA: {fileID: 1213707284}
   inputBoxB: {fileID: 2049899987}
   outputBoxA: {fileID: 2054628209}
@@ -7072,6 +7083,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 19b4314495fa73e42b15ce15d15a89eb, type: 3}
+    - target: {fileID: 4464284337394328596, guid: 2c65a2ec703ab174cbb9554a03484e5e, type: 3}
+      propertyPath: m_TagString
+      value: Button
+      objectReference: {fileID: 0}
     - target: {fileID: 4464284338519721895, guid: 2c65a2ec703ab174cbb9554a03484e5e, type: 3}
       propertyPath: m_Name
       value: powerControllerInputA
@@ -7247,14 +7262,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890796446}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 3, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1398828263}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1901799765
 GameObject:
   m_ObjectHideFlags: 0
@@ -7622,6 +7637,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BInputCollider
       objectReference: {fileID: 0}
+    - target: {fileID: 4464284337394328596, guid: 2c65a2ec703ab174cbb9554a03484e5e, type: 3}
+      propertyPath: m_TagString
+      value: Button
+      objectReference: {fileID: 0}
     - target: {fileID: 4464284338519721895, guid: 2c65a2ec703ab174cbb9554a03484e5e, type: 3}
       propertyPath: m_Name
       value: powerControllerInputB
@@ -7762,7 +7781,7 @@ PrefabInstance:
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onRelease.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1983668834}
+      objectReference: {fileID: 205507017}
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -7785,7 +7804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onRelease.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: NXOR, Assembly-CSharp
+      value: GlobalButtonEnableDisable, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -7871,10 +7890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97fb6a28df3ee2140b05218e54fcf4ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testButton: {fileID: 1983668833}
-  leftHandCollider: {fileID: 1302060515}
-  rightHandCollider: {fileID: 709070996}
-  roomColorChanger: {fileID: 205507013}
+  roomController: {fileID: 205507013}
   inputBoxA: {fileID: 1213707284}
   inputBoxB: {fileID: 2049899987}
   outputBoxA: {fileID: 2054628209}
@@ -8062,6 +8078,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 19b4314495fa73e42b15ce15d15a89eb, type: 3}
+    - target: {fileID: 4464284337394328596, guid: 2c65a2ec703ab174cbb9554a03484e5e, type: 3}
+      propertyPath: m_TagString
+      value: Button
+      objectReference: {fileID: 0}
     - target: {fileID: 4464284338519721895, guid: 2c65a2ec703ab174cbb9554a03484e5e, type: 3}
       propertyPath: m_Name
       value: powerControllerInputA
@@ -8275,6 +8295,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 19b4314495fa73e42b15ce15d15a89eb, type: 3}
+    - target: {fileID: 4464284337394328596, guid: 2c65a2ec703ab174cbb9554a03484e5e, type: 3}
+      propertyPath: m_TagString
+      value: Button
+      objectReference: {fileID: 0}
     - target: {fileID: 4464284338519721895, guid: 2c65a2ec703ab174cbb9554a03484e5e, type: 3}
       propertyPath: m_Name
       value: powerControllerInputA
@@ -8653,6 +8677,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1558528598}
     m_Modifications:
+    - target: {fileID: 7666890455794492680, guid: f9ef5260cd20e604ab56403e5f051def, type: 3}
+      propertyPath: m_TagString
+      value: Button
+      objectReference: {fileID: 0}
     - target: {fileID: 7666890457132671820, guid: f9ef5260cd20e604ab56403e5f051def, type: 3}
       propertyPath: m_Name
       value: SpawnerSplitterWire
@@ -8780,6 +8808,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1558528598}
     m_Modifications:
+    - target: {fileID: 8881363557886350145, guid: e5d798fe6736839438423bca9718e607, type: 3}
+      propertyPath: m_TagString
+      value: Button
+      objectReference: {fileID: 0}
     - target: {fileID: 8881363558687134981, guid: e5d798fe6736839438423bca9718e607, type: 3}
       propertyPath: m_Name
       value: SpawnerORGate
@@ -8967,6 +8999,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AInputCollider
       objectReference: {fileID: 0}
+    - target: {fileID: 4464284337394328596, guid: 2c65a2ec703ab174cbb9554a03484e5e, type: 3}
+      propertyPath: m_TagString
+      value: Button
+      objectReference: {fileID: 0}
     - target: {fileID: 4464284338519721895, guid: 2c65a2ec703ab174cbb9554a03484e5e, type: 3}
       propertyPath: m_Name
       value: powerControllerInputA
@@ -9033,6 +9069,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnerANDGate
       objectReference: {fileID: 0}
+    - target: {fileID: 3234537034958270371, guid: fc41202da84dec345beaeab2a1b2f8ad, type: 3}
+      propertyPath: m_TagString
+      value: Button
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc41202da84dec345beaeab2a1b2f8ad, type: 3}
 --- !u!1001 &5279851877913694761
@@ -9089,6 +9129,10 @@ PrefabInstance:
     - target: {fileID: 2629661023256519074, guid: 3a584a30067686c4cbdf560360e88595, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2629661024594831333, guid: 3a584a30067686c4cbdf560360e88595, type: 3}
+      propertyPath: m_TagString
+      value: Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a584a30067686c4cbdf560360e88595, type: 3}
@@ -9208,6 +9252,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnerNOTGate
       objectReference: {fileID: 0}
+    - target: {fileID: 492885079934021239, guid: 44256903016ee10439a525f0cea9057a, type: 3}
+      propertyPath: m_TagString
+      value: Button
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44256903016ee10439a525f0cea9057a, type: 3}
 --- !u!1001 &7835781545698000806
@@ -9264,6 +9312,10 @@ PrefabInstance:
     - target: {fileID: 7876190250906160066, guid: 58c17d4155573db4fa088ee3773bbb02, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876190252252466565, guid: 58c17d4155573db4fa088ee3773bbb02, type: 3}
+      propertyPath: m_TagString
+      value: Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58c17d4155573db4fa088ee3773bbb02, type: 3}
@@ -9408,6 +9460,10 @@ PrefabInstance:
     - target: {fileID: 1959554384404926918, guid: 25fb6fe775a63b64a9c571d045dbdc3b, type: 3}
       propertyPath: m_Name
       value: SpawnerXORGate
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959554385215018882, guid: 25fb6fe775a63b64a9c571d045dbdc3b, type: 3}
+      propertyPath: m_TagString
+      value: Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25fb6fe775a63b64a9c571d045dbdc3b, type: 3}

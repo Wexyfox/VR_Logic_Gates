@@ -13,6 +13,7 @@ TagManager:
   - Marker
   - OutputBox
   - InputBox
+  - Button
   layers:
   - Default
   - TransparentFX

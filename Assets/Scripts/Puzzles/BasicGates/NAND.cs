@@ -5,19 +5,14 @@ using UnityEngine;
 public class NAND : MonoBehaviour
 {
     private int stateChangeTime = 2;
-
-    [SerializeField] GameObject testButton;
-    [SerializeField] GameObject leftHandCollider;
-    [SerializeField] GameObject rightHandCollider;
-
-    [SerializeField] GameObject roomColorChanger;
+    [SerializeField] GameObject roomController;
 
     [SerializeField] GameObject inputBoxA;
     [SerializeField] GameObject inputBoxB;
     [SerializeField] GameObject outputBoxA;
     private bool puzzlePassed = false;
     private bool checkBool;
-    
+
     private int stateCheck = 0;
 
     public void PuzzleCheck()
@@ -99,15 +94,15 @@ public class NAND : MonoBehaviour
         {
             stateCheck = 0;
             puzzlePassed = true;
-            roomColorChanger.GetComponent<RoomColorChange>().roomGreen();
+            roomController.GetComponent<RoomColorChange>().roomGreen();
         }
         else
         {
             stateCheck = 0;
             puzzlePassed = false;
-            roomColorChanger.GetComponent<RoomColorChange>().roomRed();
+            roomController.GetComponent<RoomColorChange>().roomRed();
         }
-        TestButtonEnable();
+        roomController.GetComponent<GlobalButtonEnableDisable>().TestButtonEnable();
     }
 
     public bool CheckPuzzlePassed()
@@ -118,19 +113,5 @@ public class NAND : MonoBehaviour
     private void CheckOutputPower()
     {
         checkBool = outputBoxA.GetComponent<OutputPower>().CheckPowered();
-    }
-
-    public void TestButtonDisable()
-    {
-        testButton.GetComponent<BoxCollider>().enabled = false;
-        leftHandCollider.GetComponent<SphereCollider>().enabled = false;
-        rightHandCollider.GetComponent<SphereCollider>().enabled = false;
-    }
-
-    private void TestButtonEnable()
-    {
-        testButton.GetComponent<BoxCollider>().enabled = true;
-        leftHandCollider.GetComponent<SphereCollider>().enabled = true;
-        rightHandCollider.GetComponent<SphereCollider>().enabled = true;
     }
 }

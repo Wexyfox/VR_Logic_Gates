@@ -21,6 +21,14 @@ public class InputPower : MonoBehaviour
         UpdatePowerOutput();
     }
 
+    private void Update()
+    {
+        if (!powered)
+        {
+            asignedButton.BroadcastMessage("ActiveGlowOff");
+        }
+    }
+
     public void PowerOn()
     {
         powered = true;
