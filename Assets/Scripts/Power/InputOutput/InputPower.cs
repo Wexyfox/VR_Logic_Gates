@@ -21,7 +21,7 @@ public class InputPower : MonoBehaviour
         UpdatePowerOutput();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (!powered)
         {

@@ -2075,7 +2075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de77f5b62e282f04fa6556efc87e99f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: TestZoneScene
+  nextScene: Tutorial2Splitter
 --- !u!1001 &856373381
 PrefabInstance:
   m_ObjectHideFlags: 0

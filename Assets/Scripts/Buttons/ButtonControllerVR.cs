@@ -10,11 +10,23 @@ public class ButtonControllerVR : MonoBehaviour
     public UnityEvent onRelease;
     AudioSource soundEffect;
     private bool isPressed = false;
-    private bool buttonEnabled;
+    private bool buttonEnabled = false;
 
     void Start()
     {
         soundEffect = GetComponent<AudioSource>();
+    }
+
+    private void FixedUpdate()
+    {
+        if (enabled)
+        {
+            button.BroadcastMessage("ActiveGlowOn");
+        }
+        else
+        {
+            button.BroadcastMessage("ActiveGlowOff");
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -43,13 +55,11 @@ public class ButtonControllerVR : MonoBehaviour
 
     public void ButtonEnable()
     {
-        button.BroadcastMessage("ActiveGlowOn");
         buttonEnabled = true;
     }
 
     public void ButtonDisable()
     {
-        button.BroadcastMessage("ActiveGlowOff");
         buttonEnabled = false;
     }
 }

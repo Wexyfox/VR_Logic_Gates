@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuRoom.unity
     guid: a25c5441987e6ac4e87c774b5c3e71d8
   - enabled: 1
-    path: Assets/Scenes/TutorialWires.unity
+    path: Assets/Scenes/Tutorial1Wires.unity
     guid: e79288f71f71a4549ba92bbd43bb70b9
   - enabled: 1
     path: Assets/Scenes/TestZoneScene.unity

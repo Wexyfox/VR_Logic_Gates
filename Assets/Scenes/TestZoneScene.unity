@@ -2721,6 +2721,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7566017803546255553, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
+      propertyPath: m_Name
+      value: NextRoomCollider
+      objectReference: {fileID: 0}
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onPress.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2755,7 +2759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7566017804355823237, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: m_Name
-      value: NextPuzzle
+      value: BackToMenu
       objectReference: {fileID: 0}
     - target: {fileID: 7566017804355823238, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: m_RootOrder
@@ -2808,25 +2812,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7566017803701644721, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
   m_PrefabInstance: {fileID: 630267763}
   m_PrefabAsset: {fileID: 0}
---- !u!23 &630267765 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 7566017803701644723, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
-  m_PrefabInstance: {fileID: 630267763}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &630267766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 630267764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58125c9b699231d49b8bc137cb7258db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  emissiveMaterial: {fileID: 2100000, guid: 39451bdc39293584292408ab8cfecd97, type: 2}
-  glowObject: {fileID: 630267765}
 --- !u!1001 &633210211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7473,7 +7458,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de77f5b62e282f04fa6556efc87e99f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: EmptyRoom
+  nextScene: MenuRoom
+  asignedButton: {fileID: 630267764}
 --- !u!1 &1939175980
 GameObject:
   m_ObjectHideFlags: 0
