@@ -7,6 +7,5 @@ public class TestZoneRoom : MonoBehaviour
     private void Start()
     {
         gameObject.GetComponent<GlobalButtonEnableDisable>().TestButtonEnable();
-        gameObject.GetComponent<GlobalButtonEnableDisable>().ActivateNextRoomButtons();
     }
 }

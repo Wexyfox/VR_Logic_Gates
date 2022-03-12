@@ -2723,7 +2723,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7566017803546255553, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: m_Name
-      value: NextRoomCollider
+      value: MenuCollider
       objectReference: {fileID: 0}
     - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: onPress.m_PersistentCalls.m_Calls.Array.size
@@ -2807,11 +2807,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
---- !u!1 &630267764 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7566017803701644721, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
-  m_PrefabInstance: {fileID: 630267763}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &633210211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7459,7 +7454,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: MenuRoom
-  asignedButton: {fileID: 630267764}
 --- !u!1 &1939175980
 GameObject:
   m_ObjectHideFlags: 0
