@@ -97,6 +97,7 @@ public class NOR : MonoBehaviour
             stateCheck = 0;
             puzzlePassed = true;
             roomController.GetComponent<RoomColorChange>().roomGreen();
+            roomController.GetComponent<GlobalButtonEnableDisable>().ActivateNextRoomButtons();
         }
         else
         {

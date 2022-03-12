@@ -93,6 +93,7 @@ public class ANDTutorial : MonoBehaviour
         {
             stateCheck = 0;
             roomController.GetComponent<RoomColorChange>().roomGreen();
+            roomController.GetComponent<GlobalButtonEnableDisable>().ActivateNextRoomButtons();
         }
         else
         {

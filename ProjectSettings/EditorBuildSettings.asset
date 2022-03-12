@@ -18,6 +18,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial3Spawner.unity
     guid: 72cfb07b70a870c44ad8ea3de030b6a7
   - enabled: 1
+    path: Assets/Scenes/Tutorial4Gate.unity
+    guid: fb593d5b6d33971429f9e122abefd22e
+  - enabled: 1
+    path: Assets/Scenes/Tutorial5Whiteboard.unity
+    guid: 5e510654731deb6449f72f21b6c01e17
+  - enabled: 1
+    path: Assets/Scenes/Tutorial6Bin.unity
+    guid: 0e3801875f729304b94a997f4de0102d
+  - enabled: 1
+    path: Assets/Scenes/Tutorial7TruthTables.unity
+    guid: 3abbd2a4e3e18e44a9fb2f59026ed893
+  - enabled: 1
     path: Assets/Scenes/TestZoneScene.unity
     guid: 758bf01a2cb51ef438929bc774bcbdec
   m_configObjects:
