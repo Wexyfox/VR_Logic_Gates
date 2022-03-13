@@ -9,3 +9,5 @@ To install it on Oculus follow these steps:
 1) Change the project build settings to Android 
 2) Use Oculus app on phone or pc to change the device to "developer mode"
 3) Use SideQuest or other .apk installer to install build apk onto device 
+
+https://www.youtube.com/watch?v=FDzEGYBZU5k&t=5s&ab_channel=Wexyfox  - Video demo test room and basic functionalities
