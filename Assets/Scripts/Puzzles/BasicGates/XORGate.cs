@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ANDGate : MonoBehaviour
+public class XORGate : MonoBehaviour
 {
     private int stateChangeTime = 2;
     [SerializeField] GameObject roomController;
@@ -31,12 +31,12 @@ public class ANDGate : MonoBehaviour
     private void CheckSet1()
     {
         CheckOutputPower();
-        if (checkBool)
+        if (!checkBool)
         {
             stateCheck += 1;
             roomController.GetComponent<TableController>().PassState(1);
         }
-        else 
+        else
         {
             roomController.GetComponent<TableController>().FailState(1);
         }
@@ -53,7 +53,7 @@ public class ANDGate : MonoBehaviour
     private void CheckSet2()
     {
         CheckOutputPower();
-        if (!checkBool)
+        if (checkBool)
         {
             stateCheck += 1;
             roomController.GetComponent<TableController>().PassState(2);
@@ -75,7 +75,7 @@ public class ANDGate : MonoBehaviour
     private void CheckSet3()
     {
         CheckOutputPower();
-        if (!checkBool)
+        if (checkBool)
         {
             stateCheck += 1;
             roomController.GetComponent<TableController>().PassState(3);
@@ -106,10 +106,10 @@ public class ANDGate : MonoBehaviour
         {
             roomController.GetComponent<TableController>().FailState(4);
         }
-        Invoke("ANDPowerCheck", stateChangeTime);
+        Invoke("XORPowerCheck", stateChangeTime);
     }
 
-    private void ANDPowerCheck()
+    private void XORPowerCheck()
     {
         if (stateCheck == 4)
         {

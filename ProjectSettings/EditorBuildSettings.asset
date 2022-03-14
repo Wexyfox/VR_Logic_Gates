@@ -39,6 +39,15 @@ EditorBuildSettings:
     path: Assets/Scenes/BasicGates/ANDRoom.unity
     guid: b3eaba72547584a4ab24804630edbe04
   - enabled: 1
+    path: Assets/Scenes/BasicGates/ORRoom.unity
+    guid: b0182300be02eb24d9ff384a58501626
+  - enabled: 1
+    path: Assets/Scenes/BasicGates/XORRoom.unity
+    guid: e01978546947ad1449279ae2797aa190
+  - enabled: 1
+    path: Assets/Scenes/BasicGates/NOTRoom.unity
+    guid: d03d2297dd86c8d4588e32e82e78d2c4
+  - enabled: 1
     path: Assets/Scenes/TestZoneScene.unity
     guid: 758bf01a2cb51ef438929bc774bcbdec
   m_configObjects:

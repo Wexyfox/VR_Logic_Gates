@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ANDGate : MonoBehaviour
+public class NOTGate : MonoBehaviour
 {
     private int stateChangeTime = 2;
     [SerializeField] GameObject roomController;
 
     [SerializeField] GameObject inputBoxA;
-    [SerializeField] GameObject inputBoxB;
     [SerializeField] GameObject outputBoxA;
     private bool checkBool;
 
@@ -24,19 +23,18 @@ public class ANDGate : MonoBehaviour
     private void StateSet1()
     {
         inputBoxA.GetComponent<InputPower>().PowerOn();
-        inputBoxB.GetComponent<InputPower>().PowerOn();
         Invoke("CheckSet1", stateChangeTime);
     }
 
     private void CheckSet1()
     {
         CheckOutputPower();
-        if (checkBool)
+        if (!checkBool)
         {
             stateCheck += 1;
             roomController.GetComponent<TableController>().PassState(1);
         }
-        else 
+        else
         {
             roomController.GetComponent<TableController>().FailState(1);
         }
@@ -46,14 +44,13 @@ public class ANDGate : MonoBehaviour
     private void StateSet2()
     {
         inputBoxA.GetComponent<InputPower>().PowerOff();
-        inputBoxB.GetComponent<InputPower>().PowerOn();
         Invoke("CheckSet2", stateChangeTime);
     }
 
     private void CheckSet2()
     {
         CheckOutputPower();
-        if (!checkBool)
+        if (checkBool)
         {
             stateCheck += 1;
             roomController.GetComponent<TableController>().PassState(2);
@@ -62,54 +59,10 @@ public class ANDGate : MonoBehaviour
         {
             roomController.GetComponent<TableController>().FailState(2);
         }
-        StateSet3();
+        Invoke("NOTPowerCheck", stateChangeTime);
     }
 
-    private void StateSet3()
-    {
-        inputBoxA.GetComponent<InputPower>().PowerOn();
-        inputBoxB.GetComponent<InputPower>().PowerOff();
-        Invoke("CheckSet3", stateChangeTime);
-    }
-
-    private void CheckSet3()
-    {
-        CheckOutputPower();
-        if (!checkBool)
-        {
-            stateCheck += 1;
-            roomController.GetComponent<TableController>().PassState(3);
-        }
-        else
-        {
-            roomController.GetComponent<TableController>().FailState(3);
-        }
-        StateSet4();
-    }
-
-    private void StateSet4()
-    {
-        inputBoxA.GetComponent<InputPower>().PowerOff();
-        inputBoxB.GetComponent<InputPower>().PowerOff();
-        Invoke("CheckSet4", stateChangeTime);
-    }
-
-    private void CheckSet4()
-    {
-        CheckOutputPower();
-        if (!checkBool)
-        {
-            stateCheck += 1;
-            roomController.GetComponent<TableController>().PassState(4);
-        }
-        else
-        {
-            roomController.GetComponent<TableController>().FailState(4);
-        }
-        Invoke("ANDPowerCheck", stateChangeTime);
-    }
-
-    private void ANDPowerCheck()
+    private void NOTPowerCheck()
     {
         if (stateCheck == 4)
         {

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ANDGate : MonoBehaviour
+public class ORGate : MonoBehaviour
 {
     private int stateChangeTime = 2;
     [SerializeField] GameObject roomController;
@@ -13,7 +13,6 @@ public class ANDGate : MonoBehaviour
     private bool checkBool;
 
     private int stateCheck = 0;
-
 
     public void PuzzleCheck()
     {
@@ -36,7 +35,7 @@ public class ANDGate : MonoBehaviour
             stateCheck += 1;
             roomController.GetComponent<TableController>().PassState(1);
         }
-        else 
+        else
         {
             roomController.GetComponent<TableController>().FailState(1);
         }
@@ -53,7 +52,7 @@ public class ANDGate : MonoBehaviour
     private void CheckSet2()
     {
         CheckOutputPower();
-        if (!checkBool)
+        if (checkBool)
         {
             stateCheck += 1;
             roomController.GetComponent<TableController>().PassState(2);
@@ -75,7 +74,7 @@ public class ANDGate : MonoBehaviour
     private void CheckSet3()
     {
         CheckOutputPower();
-        if (!checkBool)
+        if (checkBool)
         {
             stateCheck += 1;
             roomController.GetComponent<TableController>().PassState(3);
@@ -106,10 +105,10 @@ public class ANDGate : MonoBehaviour
         {
             roomController.GetComponent<TableController>().FailState(4);
         }
-        Invoke("ANDPowerCheck", stateChangeTime);
+        Invoke("ORPowerCheck", stateChangeTime);
     }
 
-    private void ANDPowerCheck()
+    private void ORPowerCheck()
     {
         if (stateCheck == 4)
         {
@@ -124,7 +123,6 @@ public class ANDGate : MonoBehaviour
         }
         roomController.GetComponent<GlobalButtonEnableDisable>().TestButtonEnable();
     }
-
 
     private void CheckOutputPower()
     {
