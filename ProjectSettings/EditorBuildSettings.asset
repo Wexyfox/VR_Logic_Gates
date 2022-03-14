@@ -6,29 +6,38 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MenuRoom.unity
+    path: Assets/Scenes/Menus/MenuRoom.unity
     guid: a25c5441987e6ac4e87c774b5c3e71d8
   - enabled: 1
-    path: Assets/Scenes/Tutorial1Wires.unity
+    path: Assets/Scenes/Tutorials/Tutorial1Wires.unity
     guid: e79288f71f71a4549ba92bbd43bb70b9
   - enabled: 1
-    path: Assets/Scenes/Tutorial2Splitter.unity
+    path: Assets/Scenes/Tutorials/Tutorial2Splitter.unity
     guid: 1d0815b629aeedd4894076e7770fd7e3
   - enabled: 1
-    path: Assets/Scenes/Tutorial3Spawner.unity
+    path: Assets/Scenes/Tutorials/Tutorial3Spawner.unity
     guid: 72cfb07b70a870c44ad8ea3de030b6a7
   - enabled: 1
-    path: Assets/Scenes/Tutorial4Gate.unity
+    path: Assets/Scenes/Tutorials/Tutorial4Gate.unity
     guid: fb593d5b6d33971429f9e122abefd22e
   - enabled: 1
-    path: Assets/Scenes/Tutorial5Whiteboard.unity
+    path: Assets/Scenes/Tutorials/Tutorial5Whiteboard.unity
     guid: 5e510654731deb6449f72f21b6c01e17
   - enabled: 1
-    path: Assets/Scenes/Tutorial6Bin.unity
+    path: Assets/Scenes/Tutorials/Tutorial6Bin.unity
     guid: 0e3801875f729304b94a997f4de0102d
   - enabled: 1
-    path: Assets/Scenes/Tutorial7TruthTables.unity
+    path: Assets/Scenes/Tutorials/Tutorial7TruthTables.unity
     guid: 3abbd2a4e3e18e44a9fb2f59026ed893
+  - enabled: 1
+    path: Assets/Scenes/Menus/PuzzleMenu.unity
+    guid: 52403fae2fa0e7243aa58f8183e50aab
+  - enabled: 1
+    path: Assets/Scenes/Menus/BasicsMenu.unity
+    guid: 5e219355291ae404a864542e7b523eb6
+  - enabled: 1
+    path: Assets/Scenes/BasicGates/ANDRoom.unity
+    guid: b3eaba72547584a4ab24804630edbe04
   - enabled: 1
     path: Assets/Scenes/TestZoneScene.unity
     guid: 758bf01a2cb51ef438929bc774bcbdec
