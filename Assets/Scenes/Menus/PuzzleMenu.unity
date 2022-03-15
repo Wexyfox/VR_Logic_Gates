@@ -1307,6 +1307,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: NextRoomCollider
       objectReference: {fileID: 0}
+    - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
+      propertyPath: onPress.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
+      propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
+      propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 696742286}
+    - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
+      propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
+      propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
+      propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566017803546255555, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
+      propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7566017803546255556, guid: 29345a64571ff654abd48b6e0a46eb15, type: 3}
       propertyPath: m_audioClip
       value: 
@@ -1403,7 +1431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de77f5b62e282f04fa6556efc87e99f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: 
+  nextScene: StandardPuzzles
 --- !u!1 &709070996 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d81d18a2f64d23b429a155432505e1f0, type: 3}

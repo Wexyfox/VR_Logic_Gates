@@ -48,6 +48,12 @@ EditorBuildSettings:
     path: Assets/Scenes/BasicGates/NOTRoom.unity
     guid: d03d2297dd86c8d4588e32e82e78d2c4
   - enabled: 1
+    path: Assets/Scenes/Menus/StandardPuzzles.unity
+    guid: f3a4adcf50b177145b8a6cf40f00eaf5
+  - enabled: 1
+    path: Assets/Scenes/StandardPuzzles/Puzzle1.unity
+    guid: 421a0ec6f528c8d43a8f119e201071d0
+  - enabled: 1
     path: Assets/Scenes/TestZoneScene.unity
     guid: 758bf01a2cb51ef438929bc774bcbdec
   m_configObjects:
