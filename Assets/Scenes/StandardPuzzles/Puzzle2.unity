@@ -1490,7 +1490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de77f5b62e282f04fa6556efc87e99f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: PuzzleMenu
+  nextScene: Puzzle3
 --- !u!1001 &428875536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2666,7 +2666,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602707661}
-  m_Text: Puzzle 1
+  m_Text: Puzzle 2
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -4077,10 +4077,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b907072f4b99f141813b23a5c3accd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomWall1: {fileID: 0}
-  roomWall2: {fileID: 0}
-  roomWall3: {fileID: 0}
-  roomWall4: {fileID: 0}
+  roomWall1: {fileID: 1664552744}
+  roomWall2: {fileID: 259334897}
+  roomWall3: {fileID: 1060707405}
+  roomWall4: {fileID: 99134018}
   defaultMaterial: {fileID: 2100000, guid: e25e758b3a04f034fae39153a47cc421, type: 2}
   passMaterial: {fileID: 2100000, guid: 5a3a9f26c5ac35d4db014e6b16882b68, type: 2}
   failMaterial: {fileID: 2100000, guid: 5c5f8b566f3e1d449868dde933149c6b, type: 2}
@@ -5671,7 +5671,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1265822778}
-  m_Text: NOT too hard this time
+  m_Text: New but NOT unknown
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
