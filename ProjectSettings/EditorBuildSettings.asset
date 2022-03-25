@@ -60,6 +60,9 @@ EditorBuildSettings:
     path: Assets/Scenes/StandardPuzzles/Puzzle3.unity
     guid: 38f3ae8f3aa6d7f4ea8cd9617be2b023
   - enabled: 1
+    path: Assets/Scenes/SandboxRoom.unity
+    guid: d48adc6f7b96e8c48a8b2d2e01108e21
+  - enabled: 1
     path: Assets/Scenes/TestZoneScene.unity
     guid: 758bf01a2cb51ef438929bc774bcbdec
   m_configObjects:
